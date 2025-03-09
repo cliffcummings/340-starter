@@ -41,6 +41,9 @@ header, body {
   max-width: 1000px;
 }
 
+body {
+  background-image: url("/images/site/checkerboard.jpg");
+}
 
 h2 {
   font-size: 2rem;
@@ -95,6 +98,11 @@ ul.menuLinks {
   padding: 0;
 }
 
+#wrapper {
+  background-color: white;
+  border: 5px solid var(--back_color4);
+  margin: 2rem;
+}
 
 section {
   background-color: aquamarine;
