@@ -9,7 +9,7 @@ VALUES   (
     'Stark',
     'tony@starkent.com',
     'Iam1ronM@n'
-  )
+  );
 
 SELECT * FROM public.account
 ORDER BY account_id ASC;
@@ -45,11 +45,11 @@ SELECT inv_make, inv_model, classification_name
 
 UPDATE inventory
 SET inv_image = REPLACE(inv_image, '/images', '/images/vehicles'),
-inv_thumbnail = REPLACE(inv_thumbnail, '/images', '/images/vehicles')
+inv_thumbnail = REPLACE(inv_thumbnail, '/images', '/images/vehicles');
 
 -- UPDATE inventory
 -- SET inv_image = REPLACE(inv_image, '/images/vehicles', '/images'),
--- inv_thumbnail = REPLACE(inv_thumbnail, '/images/vehicles', '/images')
+-- inv_thumbnail = REPLACE(inv_thumbnail, '/images/vehicles', '/images');
 
 SELECT * FROM public.inventory
-ORDER BY inv_id ASC 
+ORDER BY inv_id ASC;
