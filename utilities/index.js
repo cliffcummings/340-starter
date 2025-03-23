@@ -6,7 +6,7 @@ const Util = {}
  ************************* */
 Util.getNav = async function (req, res, next) {
     let data = await invModel.getClassifications()
-    console.log(data)
+    // console.log(data)
     let list = "<ul>"  /* let - because list is updated on next lines */
     list += '<li><a href="/" title="Home page">Home</a></li>' /* JS append += */
     data.rows.forEach((row) => {
@@ -22,7 +22,7 @@ Util.getNav = async function (req, res, next) {
         list += "</li>"
     })
     list += "</ul>"
-    console.log(list)
+    // console.log(list)
     return list    
 }
 

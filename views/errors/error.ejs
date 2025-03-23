@@ -1,12 +1,9 @@
-<!-- The Content Heading -->
+<%# Assignment 3, Basic Error Handling activity %>
 <% if (title) { %>
     <h1><%= title %></h1>
     <% } else {
         res.redirect('/')
     } %>
     
-    <!-- A Message Block -->
-    <%- messages("404 - File Not Found") %>
-    
-    <!-- The Inventory Items Display -->
-    <%- grid %>
+<!-- A Message Block -->
+<%- message %>
