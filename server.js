@@ -23,7 +23,7 @@ const static = require("./routes/static")
 const baseController = require("./controllers/baseController")
 const inventoryRoute = require("./routes/inventoryRoute")
 const Util = require("./utilities")
-const utilities = require("./utilities/index")
+const utilities = require("./utilities/")
 
 // app.use(router)
 app.use(static)
@@ -76,11 +76,11 @@ app.use(async (req, res, next) => {
 app.use(async (err, req, res, next) => {
   let nav = await utilities.getNav()
   console.error(`Error at: "${req.originalUrl}": ${err.message}`)
-  if(err.status == 404){message = err.message}
-  else {message = 'Oh no! There was a crash. Maybe try a different route?'}
+  // if(err.status == 404){message = err.message}
+  // else {message = 'Oh no! There was a crash. Maybe try a different route?'}
   res.render("errors/error", {
     title: err.status || 'Server Error',
-    message,
+    message: err.message,
     nav
   })
 })
