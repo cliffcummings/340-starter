@@ -9,7 +9,7 @@ router.use(express.static("public"));
 router.use("/css", express.static(__dirname + "public/css"));
 router.use("/js", express.static(__dirname + "public/js"));
 router.use("/images", express.static(__dirname + "public/images"));
-router.use("/TBD", express.static(__dirname + "public/TBD"));
+// router.use("/TBD", express.static(__dirname + "public/TBD"));
 
 // Allows server.js to call app.use(router)
 module.exports = router;

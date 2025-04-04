@@ -17,9 +17,9 @@ const env = require("dotenv").config()                 // Loads up the /.env fil
 const app = express()
 // Exported from routes/static
 const static = require("./routes/static")
-const funRoutes = require("./routes/allFunRoutes")
+// const funRoutes = require("./routes/allFunRoutes")
 
-const exampleController = require("./controllers/exampleController")
+// const exampleController = require("./controllers/exampleController")
 const baseController = require("./controllers/baseController")
 const inventoryRoute = require("./routes/inventoryRoute")
 const Util = require("./utilities")
@@ -36,9 +36,9 @@ app.use(expressLayouts)
 app.set("layout", "./layouts/layout") // not at views root
 
 // NEW - TBD
-app.get('/', exampleController.buildHome);
+app.get('/', baseController.buildHome);
 
-app.use("/fun", funRoutes );
+// app.use("/fun", funRoutes );
 
 // router.get("/fun/bike", async function (req, res) {
 //   res.render("./fun-stuff/abc", {things:"great!"})
